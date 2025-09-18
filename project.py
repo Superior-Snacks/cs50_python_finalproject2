@@ -7,7 +7,7 @@ def main():
     #print(convert_volume(450, "l", "kl"))
     #print(convert_tempeture(2000, "c", "k"))
     #print(convert_currency(100, "UsD","IsK"))
-    display()
+    display("what do you want?")
 
 def convert_weight(ammount, old, new):
     weight = {
