@@ -113,6 +113,9 @@ def display():
     entry = ttk.Entry(window)
     entry.pack()
 
+    button = ttk.Button(window, text="Convert")
+    button.pack(pady=10)
+
     result = tkinter.Label(window, text="")
     result.pack(pady=10)
     window.mainloop()
