@@ -95,7 +95,7 @@ def get_currency(base):
     return data["rates"]
 
 def decide(amount, old, new):
-    ...
+    return amount
 
 class Display:
     def init(self):
