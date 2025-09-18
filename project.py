@@ -107,6 +107,9 @@ def display(output):
 
     label = tkinter.Label(window, text=output)
     label.pack(pady=10)
+
+    entry = ttk.Entry(window)
+    entry.pack(pady=10)
     window.mainloop()
 
 if __name__ == "__main__":
