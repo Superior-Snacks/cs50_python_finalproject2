@@ -27,11 +27,7 @@ volume = {
     # Imperial (UK) → liters
     "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609}
 def main():
-    #print(convert_weight(100, "g", "kg"))
-    #print(convert_volume(450, "l", "kl"))
-    #print(convert_tempeture(2000, "c", "k"))
-    #print(convert_currency(100, "UsD","IsK"))
-    display()
+    app = Display
 
 def convert_weight(amount, old, new):
     if old.lower() == new.lower():
@@ -100,39 +96,22 @@ def get_currency(base):
 def decide():
     input = entry.get()
     if input:
+        ...
 
 
 
 
 
 
+class Display:
+    def init(self):
+        self.root = tkinter.Tk()
+        self.root.title("Quick Converter")
+        self.root.attributes("-topmost", True)
+        self.root.geometry("360x200")
+        self.root.withdraw()
 
 
-def display():
-    piss = entry.get()
-    result = tkinter.Label(window, text=piss)
-    result.pack(pady=10)
-    print(piss)
-window = tkinter.Tk()
-window.title("first window")
-window.geometry("400x200")
-
-style = ttk.Style()
-style.configure("TLabel", font=("Segoe UI", 12))
-style.configure("TButton", font=("Segoe UI", 11), padding=6)
-
-label = tkinter.Label(window, text="Converter")
-label.pack(pady=10)
-label1 = tkinter.Label(window, text="x unit to unit")
-label1.pack(pady=10)
-
-entry = ttk.Entry(window)
-entry.pack()
-
-button = ttk.Button(window, text="Convert", command=decide)
-button.pack(pady=10)
-
-window.mainloop()
 
 if __name__ == "__main__":
     main()
