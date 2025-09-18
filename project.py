@@ -116,7 +116,7 @@ def display():
     button = ttk.Button(window, text="Convert")
     button.pack(pady=10)
 
-    result = tkinter.Label(window, text="")
+    result = tkinter.Label(window, text="45cm")
     result.pack(pady=10)
     window.mainloop()
 
