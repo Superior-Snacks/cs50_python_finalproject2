@@ -28,6 +28,7 @@ volume = {
     "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609}
 def main():
     app = Display
+    app.root.mainloop()
 
 def convert_weight(amount, old, new):
     if old.lower() == new.lower():
