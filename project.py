@@ -4,7 +4,7 @@ from tkinter import ttk
 def main():
     display()
 
-def convert_weight(x, untitx, unity):
+def convert_weight(amount, old, new):
     weight = {
         # Metric (SI, in grams)
         "yg": 1e-24,"zg": 1e-21,"ag": 1e-18,"fg": 1e-15,"pg": 1e-12,"ng": 1e-9,"µg": 1e-6,"mg": 1e-3,"cg": 1e-2,"dg": 1e-1,
@@ -33,7 +33,7 @@ def convert_volume():
         # Imperial (UK) → liters
         "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609
     }
-    
+
 def convert_tempeture(x, y):
     ...
 def convert_currency(x, y):
