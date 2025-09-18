@@ -1,6 +1,7 @@
 import tkinter
 from tkinter import ttk
 import requests
+import re
 
 currencies = ['AUD','BGN','BRL','CAD','CHF','CNY','CZK','DKK','EUR','GBP','HKD','HUF','IDR','ILS','INR','ISK',
                 'JPY','KRW','MXN','MYR','NOK','NZD','PHP','PLN','RON','SEK','SGD','THB','TRY','USD','ZAR']
@@ -99,6 +100,13 @@ def get_currency(base):
 def decide():
     input = entry.get()
     if input:
+
+
+
+
+
+
+
 
 def display():
     piss = entry.get()
