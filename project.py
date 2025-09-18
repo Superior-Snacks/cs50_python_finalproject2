@@ -2,7 +2,8 @@ import tkinter
 from tkinter import ttk
 
 def main():
-    display()
+    print(convert_weight(100, "g", "kg"))
+   #display()
 
 def convert_weight(ammount, old, new):
     weight = {
