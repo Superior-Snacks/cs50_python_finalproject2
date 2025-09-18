@@ -16,7 +16,7 @@ def convert_currency(x, y):
 def get_currency():
     ...
 
-def display():
+def display(output):
     window = tkinter.Tk()
     window.title("first window")
     window.geometry("400x200")
@@ -25,13 +25,8 @@ def display():
     style.configure("TLabel", font=("Segoe UI", 12))
     style.configure("TButton", font=("Segoe UI", 11), padding=6)
 
-    label = tkinter.Label(window, text="Enter a number:")
+    label = tkinter.Label(window, text=output)
     label.pack(pady=10)
-
-    entry = ttk.Entry(window)
-    entry.pack(pady=5)
-
-
     window.mainloop()
 
 if __name__ == "__main__":
