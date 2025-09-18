@@ -97,28 +97,29 @@ def get_currency(base):
     return data["rates"]
 
 def display():
-    window = tkinter.Tk()
-    window.title("first window")
-    window.geometry("400x200")
+    ...
+window = tkinter.Tk()
+window.title("first window")
+window.geometry("400x200")
 
-    style = ttk.Style()
-    style.configure("TLabel", font=("Segoe UI", 12))
-    style.configure("TButton", font=("Segoe UI", 11), padding=6)
+style = ttk.Style()
+style.configure("TLabel", font=("Segoe UI", 12))
+style.configure("TButton", font=("Segoe UI", 11), padding=6)
 
-    label = tkinter.Label(window, text="Converter")
-    label.pack(pady=10)
-    label1 = tkinter.Label(window, text="x unit to unit")
-    label1.pack(pady=10)
+label = tkinter.Label(window, text="Converter")
+label.pack(pady=10)
+label1 = tkinter.Label(window, text="x unit to unit")
+label1.pack(pady=10)
 
-    entry = ttk.Entry(window)
-    entry.pack()
+entry = ttk.Entry(window)
+entry.pack()
 
-    button = ttk.Button(window, text="Convert")
-    button.pack(pady=10)
+button = ttk.Button(window, text="Convert")
+button.pack(pady=10)
 
-    result = tkinter.Label(window, text="45cm")
-    result.pack(pady=10)
-    window.mainloop()
+result = tkinter.Label(window, text="45cm")
+result.pack(pady=10)
+window.mainloop()
 
 if __name__ == "__main__":
     main()
