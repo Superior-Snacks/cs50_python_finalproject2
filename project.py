@@ -33,6 +33,8 @@ def main():
     display("what do you want?")
 
 def convert_weight(amount, old, new):
+    if old.lower() == new.lower():
+        return amount
     if (old in weight) and (new in weight):
         grams = amount * weight[old]
         result = grams / weight[new]
@@ -41,6 +43,8 @@ def convert_weight(amount, old, new):
         return "input error"
 
 def convert_length(amount, old, new):
+    if old.lower() == new.lower():
+        return amount
     if (old in length) and (new in length):
         meters = amount * length[old]
         result = meters / length[new]
@@ -49,6 +53,8 @@ def convert_length(amount, old, new):
         return "input error"
 
 def convert_volume(amount, old, new):
+    if old.lower() == new.lower():
+        return amount
     if (old in volume) and (new in volume):
         liters = amount * volume[old]
         result = liters / volume[new]
@@ -57,6 +63,8 @@ def convert_volume(amount, old, new):
         return "input error"
 
 def convert_temperature(amount, old, new):
+    if old.lower() == new.lower():
+        return amount
     if old in ["C", "c"]:
         if new in ["F", "f"]:
             return amount * 9/5 +32
@@ -76,6 +84,8 @@ def convert_temperature(amount, old, new):
         return "input error"
 
 def convert_currency(amount, old, new):
+    if old.lower() == new.lower():
+        return amount
     if (old.upper() in currencies) and (new.upper() in currencies):
         return amount * get_currency(old.upper())[new.upper()]
 
