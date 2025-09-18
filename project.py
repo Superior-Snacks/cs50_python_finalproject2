@@ -89,7 +89,6 @@ def get_currency(base):
     data = response.json()
     return data["rates"]
 
-
 def display(output):
     window = tkinter.Tk()
     window.title("first window")
