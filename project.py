@@ -140,11 +140,15 @@ class Display:
         self.root.bind("<Return>", lambda e: self.on_convert())
 
     def on_convert(self):
-        amount = float(self.amount_entry.get())
-        old = self.from_entry.get()
-        new = self.to_entry.get()
-        result = decide(amount, old, new)
-        self.result_label.config(text=f"Result: {result:,.6g} {new}")
+        try:
+            amount = float(self.amount_entry.get())
+            old = self.from_entry.get()
+            new = self.to_entry.get()
+            result = decide(amount, old, new)
+            print(result)
+            self.result_label.config(text=f"Result: {result:,.6g} {new}")
+        except:
+            self.result_label.config(text=f"Result: ERROR")
 
     def run(self):
         self.root.mainloop()
