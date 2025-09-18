@@ -34,6 +34,8 @@ def convert_length(ammount, old, new):
         meters = ammount * length[old]
         result = meters / length[new]
         return result
+    else:
+        return "input error"
 
 def convert_volume(ammount, old, new):
     volume = {
@@ -49,6 +51,8 @@ def convert_volume(ammount, old, new):
         liters = ammount * volume["old"]
         result = liters / volume["new"]
         return result
+    else:
+        return "input error"
 
 def convert_tempeture(x, y):
     ...
