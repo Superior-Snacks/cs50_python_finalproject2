@@ -6,6 +6,7 @@ def main():
     print(convert_weight(100, "g", "kg"))
     print(convert_volume(450, "l", "kl"))
     print(convert_tempeture(2000, "c", "k"))
+    print(get_currency("USD"))
    #display()
 
 def convert_weight(ammount, old, new):
