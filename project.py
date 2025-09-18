@@ -81,6 +81,7 @@ def convert_currency(ammount, old, new):
 def get_currency(base):
     url =f"https://api.frankfurter.app/latest?from={base}"
     response = requests.get(url)
+    response.raise_for_status()
     data = response.json()
     return data
 
