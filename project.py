@@ -1,12 +1,20 @@
 import tkinter
 from tkinter import ttk
 
-
+units = {
+    "metric_lenght":[eniter scope of metric lenght units],
+    "imperial_lenght":[eniter scope of imperial lenght units],
+    "metric_weight":[eniter scope of metric weight units],
+    "imperial_weight":[eniter scope of imperial weight units],
+}
 def main():
     display()
 
-def convert_weight(x, y):
-    ...
+def convert_weight(x, untitx, y, unity):
+    
+
+
+
 def convert_length(x, y):
     ...
 def convert_tempeture(x, y):
