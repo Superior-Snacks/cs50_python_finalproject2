@@ -1,6 +1,11 @@
+import tkinter
+
 
 def main():
-    ...
+    window = tkinter()
+    window.title("forst window")
+    window.geometry("400x300")
+    window.mainloop()
 
 def convert_weight():
     ...
