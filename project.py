@@ -3,7 +3,7 @@ import tkinter
 
 def main():
     window = tkinter.Tk()
-    window.title("forst window")
+    window.title("first window")
     window.geometry("400x300")
     window.mainloop()
 
