@@ -6,7 +6,7 @@ def main():
     print(convert_weight(100, "g", "kg"))
     print(convert_volume(450, "l", "kl"))
     print(convert_tempeture(2000, "c", "k"))
-    print(get_currency("ISK"))
+    print(convert_currency(100, "UsD","IsK"))
    #display()
 
 def convert_weight(ammount, old, new):
@@ -77,10 +77,10 @@ def convert_tempeture(ammount, old, new):
         return "input error"
 
 def convert_currency(ammount, old, new):
-    currencies = ['AUD','BGN','BRL','CAD','CHF','CNY','CZK','DKK','EUR','GBP','HKD','HUF','IDR','ILS','INR',
+    currencies = ['AUD','BGN','BRL','CAD','CHF','CNY','CZK','DKK','EUR','GBP','HKD','HUF','IDR','ILS','INR','ISK',
                   'JPY','KRW','MXN','MYR','NOK','NZD','PHP','PLN','RON','SEK','SGD','THB','TRY','USD','ZAR']
     if (old.upper() in currencies) and (new.upper() in currencies):
-        return ammount * get_currency(old)[new]
+        return ammount * get_currency(old.upper())[new.upper()]
 
 def get_currency(base):
     url =f"https://api.frankfurter.app/latest?from={base}"
