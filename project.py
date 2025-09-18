@@ -16,7 +16,7 @@ def convert_weight(ammount, old, new):
     }
     if (old in weight) and (new in weight):
         grams = ammount * weight[old]
-        result = grams/ weight[new]
+        result = grams / weight[new]
         return result
     else:
         return "input error"
@@ -32,7 +32,7 @@ def convert_length(ammount, old, new):
     }
     if (old in length) and (new in length):
         meters = ammount * length[old]
-        result = meters/ length[new]
+        result = meters / length[new]
         return result
 
 def convert_volume(ammount, old, new):
@@ -45,6 +45,10 @@ def convert_volume(ammount, old, new):
         # Imperial (UK) → liters
         "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609
     }
+    if (old in volume) and (new in volume):
+        liters = ammount * volume["old"]
+        result = liters / volume["new"]
+        return result
 
 def convert_tempeture(x, y):
     ...
