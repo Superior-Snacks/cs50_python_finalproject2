@@ -95,7 +95,7 @@ def decide(amount, old, new):
     return amount
 
 class Display:
-    def init(self):
+    def __init__(self):
         self.root = tkinter.Tk()
         self.root.title("Quick Converter")
         self.root.attributes("-topmost", True)
