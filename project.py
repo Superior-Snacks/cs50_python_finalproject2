@@ -3,11 +3,11 @@ from tkinter import ttk
 import requests
 
 def main():
-    print(convert_weight(100, "g", "kg"))
-    print(convert_volume(450, "l", "kl"))
-    print(convert_tempeture(2000, "c", "k"))
-    print(convert_currency(100, "UsD","IsK"))
-   #display()
+    #print(convert_weight(100, "g", "kg"))
+    #print(convert_volume(450, "l", "kl"))
+    #print(convert_tempeture(2000, "c", "k"))
+    #print(convert_currency(100, "UsD","IsK"))
+    display()
 
 def convert_weight(ammount, old, new):
     weight = {
