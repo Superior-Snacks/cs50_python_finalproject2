@@ -94,15 +94,8 @@ def get_currency(base):
     data = response.json()
     return data["rates"]
 
-def decide():
-    input = entry.get()
-    if input:
-        ...
-
-
-
-
-
+def decide(amount, old, new):
+    ...
 
 class Display:
     def init(self):
@@ -111,6 +104,29 @@ class Display:
         self.root.attributes("-topmost", True)
         self.root.geometry("360x200")
         self.root.withdraw()
+
+        tkinter.Label(self.root, text="Amount:").grid(row=0, column=0, padx=10, pady=10)
+        self.amount_entry = tkinter.Entry(self.root)
+        self.amount_entry.grid(row=0, column=1, padx=10, pady=10)
+
+        tkinter.Label(self.root, text="From unit:").grid(row=1, column=0, padx=10, pady=10)
+        self.from_entry = tkinter.Entry(self.root)
+        self.from_entry.grid(row=1, column=1, padx=10, pady=10)
+
+        tkinter.Label(self.root, text="To unit:").grid(row=2, column=0, padx=10, pady=10)
+        self.to_entry = tkinter.Entry(self.root)
+        self.to_entry.grid(row=2, column=1, padx=10, pady=10)
+
+        self.result_label = tkinter.Label(self.root, text="Result: --")
+        self.result_label.grid(row=3, column=0, columnspan=2, pady=10)
+
+        convert_button = tkinter.Button(self.root, text="Convert", command=self.on_convert)
+        convert_button.grid(row=4, column=0, columnspan=2, pady=10)
+
+        self.root.grid_columnconfigure(1, weight=1)
+        self.root.bind("<Return>", lambda e: self.on_convert())
+
+    def on_convert(self):
 
 
 
