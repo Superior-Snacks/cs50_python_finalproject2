@@ -96,13 +96,15 @@ def get_currency(base):
     data = response.json()
     return data["rates"]
 
-def decide(input):
-    ...
+def decide():
+    input = entry.get()
+    if input:
 
-def display(entry):
-    result = tkinter.Label(window, text=entry)
+def display():
+    piss = entry.get()
+    result = tkinter.Label(window, text=piss)
     result.pack(pady=10)
-    print("piss")
+    print(piss)
 window = tkinter.Tk()
 window.title("first window")
 window.geometry("400x200")
@@ -119,7 +121,7 @@ label1.pack(pady=10)
 entry = ttk.Entry(window)
 entry.pack()
 
-button = ttk.Button(window, text="Convert", command=display(entry))
+button = ttk.Button(window, text="Convert", command=decide)
 button.pack(pady=10)
 
 window.mainloop()
