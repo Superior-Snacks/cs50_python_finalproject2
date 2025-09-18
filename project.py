@@ -102,6 +102,12 @@ def decide(amount, old, new):
     if old.upper() in currencies and new.upper() in currencies:
         return convert_currency(amount, old, new)
 
+    if old in length and new in length:
+        return convert_length(amount, old, new)
+    if old in weight and new in weight:
+        return convert_weight(amount, old, new)
+    if old in volume and new in volume:
+        return convert_volume(amount, old, new)
 
 class Display:
     def __init__(self):
