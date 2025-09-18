@@ -1,7 +1,5 @@
 import tkinter
-from tkinter import ttk
 import requests
-import re
 
 temps = {"c","f","k","C","F","K"}
 currencies = ['AUD','BGN','BRL','CAD','CHF','CNY','CZK','DKK','EUR','GBP','HKD','HUF','IDR','ILS','INR','ISK',
