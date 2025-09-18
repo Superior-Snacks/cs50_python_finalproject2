@@ -2,10 +2,7 @@ import tkinter
 
 
 def main():
-    window = tkinter.Tk()
-    window.title("first window")
-    window.geometry("400x300")
-    window.mainloop()
+    display()
 
 def convert_weight():
     ...
@@ -18,7 +15,10 @@ def convert_currency():
 def get_currency():
     ...
 def display():
-    ...
+    window = tkinter.Tk()
+    window.title("first window")
+    window.geometry("400x300")
+    window.mainloop()
 
 
 
