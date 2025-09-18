@@ -3,6 +3,7 @@ from tkinter import ttk
 import requests
 import re
 
+temps = {"c","f","k","C","F","K"}
 currencies = ['AUD','BGN','BRL','CAD','CHF','CNY','CZK','DKK','EUR','GBP','HKD','HUF','IDR','ILS','INR','ISK',
                 'JPY','KRW','MXN','MYR','NOK','NZD','PHP','PLN','RON','SEK','SGD','THB','TRY','USD','ZAR']
 weight = {
@@ -92,8 +93,14 @@ def get_currency(base):
     return data["rates"]
 
 def decide(amount, old, new):
-    if not amount.isalpha():
-        return "error"
+    old = old.strip()
+    new = new.strip()
+
+    if old in temps and new in temps:
+        return convert_temperature(amount, old, new)
+
+    if old.upper() in currencies and new.upper() in currencies:
+        return convert_currency(amount, old, new)
 
 
 class Display:
