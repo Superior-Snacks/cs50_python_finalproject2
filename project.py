@@ -146,7 +146,7 @@ class Display:
             new = self.to_entry.get()
             result = decide(amount, old, new)
             print(result)
-            self.result_label.config(text=f"Result: {result:,.6g} {new}")
+            self.result_label.config(text=f"Result: {result:,} {new}")
         except:
             self.result_label.config(text=f"Result: ERROR")
 
