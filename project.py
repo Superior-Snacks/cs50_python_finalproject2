@@ -26,9 +26,6 @@ volume = {
     "floz_us": 0.0295735,"gill_us": 0.118294,"pt_us": 0.473176,"qt_us": 0.946353,"gal_us": 3.78541,
     # Imperial (UK) → liters
     "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609}
-def main():
-    app = Display()
-    app.run()
 
 def convert_weight(amount, old, new):
     if old.lower() == new.lower():
@@ -135,6 +132,10 @@ class Display:
 
     def run(self):
         self.root.mainloop()
+
+def main():
+    app = Display()
+    app.run()
 
 if __name__ == "__main__":
     main()
