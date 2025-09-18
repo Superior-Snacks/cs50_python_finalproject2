@@ -2,7 +2,7 @@ import tkinter
 
 
 def main():
-    window = tkinter()
+    window = tkinter.Tk()
     window.title("forst window")
     window.geometry("400x300")
     window.mainloop()
