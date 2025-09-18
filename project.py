@@ -92,7 +92,9 @@ def get_currency(base):
     return data["rates"]
 
 def decide(amount, old, new):
-    return amount
+    if not amount.isalpha():
+        return "error"
+
 
 class Display:
     def __init__(self):
