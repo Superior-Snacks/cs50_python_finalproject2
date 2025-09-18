@@ -54,8 +54,24 @@ def convert_volume(ammount, old, new):
     else:
         return "input error"
 
-def convert_tempeture(x, y):
-    ...
+def convert_tempeture(ammount, old, new):
+    if old in ["C", "c"]:
+        if new in ["F", "f"]:
+        elif new in ["K","k"]:
+    elif old in ["F", "f"]:
+        if new in ["C", "c"]:
+        elif new in ["K","k"]:
+    elif old in ["k","k"]:
+        if new in ["C","c"]:
+        elif new in ["F","f"]:
+    else:
+        return "input error"
+
+
+    
+
+
+
 def convert_currency(x, y):
     ...
 def get_currency():
