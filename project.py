@@ -100,7 +100,6 @@ class Display:
         self.root.title("Quick Converter")
         self.root.attributes("-topmost", True)
         self.root.geometry("360x200")
-        self.root.withdraw()
 
         tkinter.Label(self.root, text="Amount:").grid(row=0, column=0, padx=10, pady=10)
         self.amount_entry = tkinter.Entry(self.root)
