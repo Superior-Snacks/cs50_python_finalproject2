@@ -14,6 +14,7 @@ def convert_currency():
     ...
 def get_currency():
     ...
+    
 def display():
     window = tkinter.Tk()
     window.title("first window")
