@@ -22,7 +22,7 @@ def convert_weight(ammount, old, new):
         return "input error"
 
 
-def convert_length(x, y):
+def convert_length(ammount, old, new):
     length = {
         # Metric (SI, in meters)
         "ym": 1e-24,"zm": 1e-21,"am": 1e-18,"fm": 1e-15,"pm": 1e-12,"nm": 1e-9,"µm": 1e-6,"mm": 1e-3,"cm": 1e-2,"dm": 1e-1,
@@ -30,8 +30,12 @@ def convert_length(x, y):
         # Imperial → meters
         "in": 0.0254,"ft": 0.3048,"yd": 0.9144,"ch": 20.1168,"fur": 201.168,"mi": 1609.344,"lea": 4828.032
     }
+    if (old in length) and (new in length):
+        meters = ammount * length[old]
+        result = meters/ length[new]
+        return result
 
-def convert_volume():
+def convert_volume(ammount, old, new):
     volume = {
         # Metric (SI, in liters)
         "yl": 1e-24,"zl": 1e-21,"al": 1e-18,"fl": 1e-15,"pl": 1e-12,"nl": 1e-9,"µl": 1e-6,
