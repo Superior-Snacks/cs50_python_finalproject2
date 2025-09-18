@@ -16,6 +16,15 @@ weight = {
         "gr": 0.06479891,"dr": 1.771845,"oz": 28.349523125,"lb": 453.59237,"st": 6350.29318,
         "qr": 12700.58636,"cwt_us": 45359.237,"cwt_uk": 50802.34544,"ton_us": 907184.74,"ton_uk": 1016046.9088
     }
+volume = {
+        # Metric (SI, in liters)
+        "yl": 1e-24,"zl": 1e-21,"al": 1e-18,"fl": 1e-15,"pl": 1e-12,"nl": 1e-9,"µl": 1e-6,
+        "ml": 1e-3,"cl": 1e-2,"dl": 1e-1,"l": 1.0, "dal": 1e1,"hl": 1e2,"kl": 1e3,
+        # Imperial (US) → liters
+        "floz_us": 0.0295735,"gill_us": 0.118294,"pt_us": 0.473176,"qt_us": 0.946353,"gal_us": 3.78541,
+        # Imperial (UK) → liters
+        "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609
+    }
 def main():
     display()
 
