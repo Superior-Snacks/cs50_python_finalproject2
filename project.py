@@ -30,7 +30,7 @@ def main():
     #print(convert_volume(450, "l", "kl"))
     #print(convert_tempeture(2000, "c", "k"))
     #print(convert_currency(100, "UsD","IsK"))
-    display("what do you want?")
+    display()
 
 def convert_weight(amount, old, new):
     if old.lower() == new.lower():
@@ -96,7 +96,7 @@ def get_currency(base):
     data = response.json()
     return data["rates"]
 
-def display(output):
+def display():
     window = tkinter.Tk()
     window.title("first window")
     window.geometry("400x200")
@@ -105,11 +105,13 @@ def display(output):
     style.configure("TLabel", font=("Segoe UI", 12))
     style.configure("TButton", font=("Segoe UI", 11), padding=6)
 
-    label = tkinter.Label(window, text=output)
+    label = tkinter.Label(window, text="Converter")
     label.pack(pady=10)
+    label1 = tkinter.Label(window, text="x unit to unit")
+    label1.pack(pady=10)
 
     entry = ttk.Entry(window)
-    entry.pack(pady=10)
+    entry.pack()
     window.mainloop()
 
 if __name__ == "__main__":
