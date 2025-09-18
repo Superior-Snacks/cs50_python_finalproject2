@@ -77,8 +77,12 @@ def convert_tempeture(ammount, old, new):
 
 def convert_currency(ammount, old, new):
     ...
-def get_currency():
-    ...
+def get_currency(old):
+    url =f"https://api.exchangerate.host/latest?base={old}"
+    response = requests.get(url)
+    data = response.data
+    return data["rates"]
+
 
 def display(output):
     window = tkinter.Tk()
