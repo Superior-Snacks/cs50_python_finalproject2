@@ -4,7 +4,7 @@ from tkinter import ttk
 def main():
     display()
 
-def convert_weight(amount, old, new):
+def convert_weight(ammount, old, new):
     weight = {
         # Metric (SI, in grams)
         "yg": 1e-24,"zg": 1e-21,"ag": 1e-18,"fg": 1e-15,"pg": 1e-12,"ng": 1e-9,"µg": 1e-6,"mg": 1e-3,"cg": 1e-2,"dg": 1e-1,
@@ -13,6 +13,13 @@ def convert_weight(amount, old, new):
         "gr": 0.06479891,"dr": 1.771845,"oz": 28.349523125,"lb": 453.59237,"st": 6350.29318,
         "qr": 12700.58636,"cwt_us": 45359.237,"cwt_uk": 50802.34544,"ton_us": 907184.74,"ton_uk": 1016046.9088
     }
+    if (old in weight) and (new in weight):
+        grams = ammount * weight[old]
+        result = grams/ weight[new]
+        return result
+    else:
+        return "input error"
+
 
 def convert_length(x, y):
     length = {
