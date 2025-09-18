@@ -32,52 +32,52 @@ def main():
     #print(convert_currency(100, "UsD","IsK"))
     display("what do you want?")
 
-def convert_weight(ammount, old, new):
+def convert_weight(amount, old, new):
     if (old in weight) and (new in weight):
-        grams = ammount * weight[old]
+        grams = amount * weight[old]
         result = grams / weight[new]
         return result
     else:
         return "input error"
 
-def convert_length(ammount, old, new):
+def convert_length(amount, old, new):
     if (old in length) and (new in length):
-        meters = ammount * length[old]
+        meters = amount * length[old]
         result = meters / length[new]
         return result
     else:
         return "input error"
 
-def convert_volume(ammount, old, new):
+def convert_volume(amount, old, new):
     if (old in volume) and (new in volume):
-        liters = ammount * volume[old]
+        liters = amount * volume[old]
         result = liters / volume[new]
         return result
     else:
         return "input error"
 
-def convert_tempeture(ammount, old, new):
+def convert_temperature(amount, old, new):
     if old in ["C", "c"]:
         if new in ["F", "f"]:
-            return ammount * 9/5 +32
+            return amount * 9/5 +32
         elif new in ["K","k"]:
-            return ammount + 273.15
+            return amount + 273.15
     elif old in ["F", "f"]:
         if new in ["C", "c"]:
-            return (ammount - 32) * 5/9
+            return (amount - 32) * 5/9
         elif new in ["K","k"]:
-            return (ammount - 32) * 5/9 + 273.15
+            return (amount - 32) * 5/9 + 273.15
     elif old in ["K","k"]:
         if new in ["C","c"]:
-            return ammount - 273.15
+            return amount - 273.15
         elif new in ["F","f"]:
-            return (ammount - 273.15) * 9/5 + 32
+            return (amount - 273.15) * 9/5 + 32
     else:
         return "input error"
 
-def convert_currency(ammount, old, new):
+def convert_currency(amount, old, new):
     if (old.upper() in currencies) and (new.upper() in currencies):
-        return ammount * get_currency(old.upper())[new.upper()]
+        return amount * get_currency(old.upper())[new.upper()]
 
 def get_currency(base):
     url =f"https://api.frankfurter.app/latest?from={base}"
