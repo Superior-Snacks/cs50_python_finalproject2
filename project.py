@@ -57,13 +57,19 @@ def convert_volume(ammount, old, new):
 def convert_tempeture(ammount, old, new):
     if old in ["C", "c"]:
         if new in ["F", "f"]:
+            return ammount * 9/5 +32
         elif new in ["K","k"]:
+            return ammount + 273.15
     elif old in ["F", "f"]:
         if new in ["C", "c"]:
+            return (ammount - 32) * 5/9
         elif new in ["K","k"]:
+            return (ammount - 32) * 5/9 + 273.15
     elif old in ["k","k"]:
         if new in ["C","c"]:
+            return ammount - 273.15
         elif new in ["F","f"]:
+            return (ammount - 273.15) * 9/5 + 32
     else:
         return "input error"
 
