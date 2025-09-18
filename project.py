@@ -1,5 +1,6 @@
 import tkinter
 from tkinter import ttk
+import requests
 
 def main():
     print(convert_weight(100, "g", "kg"))
