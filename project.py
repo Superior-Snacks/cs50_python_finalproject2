@@ -108,6 +108,8 @@ def decide(amount, old, new):
         return convert_weight(amount, old, new)
     if old in volume and new in volume:
         return convert_volume(amount, old, new)
+    
+    return "ERROR"
 
 class Display:
     def __init__(self):
