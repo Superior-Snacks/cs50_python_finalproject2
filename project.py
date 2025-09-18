@@ -21,7 +21,6 @@ def convert_weight(ammount, old, new):
     else:
         return "input error"
 
-
 def convert_length(ammount, old, new):
     length = {
         # Metric (SI, in meters)
@@ -74,11 +73,7 @@ def convert_tempeture(ammount, old, new):
         return "input error"
 
 
-    
-
-
-
-def convert_currency(x, y):
+def convert_currency(ammount, old, new):
     ...
 def get_currency():
     ...
