@@ -78,11 +78,11 @@ def convert_tempeture(ammount, old, new):
 
 def convert_currency(ammount, old, new):
     ...
-def get_currency(old):
-    url =f"https://api.exchangerate.host/latest?base={old}"
+def get_currency(base):
+    url =f"https://api.frankfurter.app/latest?from={base}"
     response = requests.get(url)
-    data = response.data
-    return data["rates"]
+    data = response.json()
+    return data
 
 
 def display(output):
