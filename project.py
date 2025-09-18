@@ -14,11 +14,11 @@ def convert_currency():
     ...
 def get_currency():
     ...
-    
+
 def display():
     window = tkinter.Tk()
     window.title("first window")
-    window.geometry("400x300")
+    window.geometry("400x200")
     window.mainloop()
 
 
