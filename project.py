@@ -3,6 +3,7 @@ from tkinter import ttk
 
 def main():
     print(convert_weight(100, "g", "kg"))
+    print(convert_volume(450, "l", "kl"))
    #display()
 
 def convert_weight(ammount, old, new):
@@ -47,8 +48,8 @@ def convert_volume(ammount, old, new):
         "floz_uk": 0.0284131,"gill_uk": 0.142065,"pt_uk": 0.568261, "qt_uk": 1.13652,"gal_uk": 4.54609
     }
     if (old in volume) and (new in volume):
-        liters = ammount * volume["old"]
-        result = liters / volume["new"]
+        liters = ammount * volume[old]
+        result = liters / volume[new]
         return result
     else:
         return "input error"
