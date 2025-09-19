@@ -7,16 +7,10 @@ def test_convert_weight():
     assert convert_weight(1, "ton_us", "kg") == 907.18474
 
 def test_convert_volume():
-    assert convert_volume() ==
-    assert convert_volume() ==
-    assert convert_volume() ==
-    assert convert_volume() ==
-
-def test_convert_currency():
-    assert convert_currency() ==
-    assert convert_currency() ==
-    assert convert_currency() ==
-    assert convert_currency() ==
+    assert convert_volume(1, "l", "ml") == 1000
+    assert convert_volume(1, "ml", "yl") == 1.0000000000000001e+21
+    assert convert_volume(1, "gal_uk", "l") == 4.54609
+    assert convert_volume(1, "gal_us", "l") == 3.78541
 
 def test_convert_lenght():
     assert convert_length() ==
@@ -29,6 +23,12 @@ def test_convert_temperature():
     assert convert_temperature() ==
     assert convert_temperature() ==
     assert convert_temperature() ==
+
+def test_convert_currency():
+    assert convert_currency() ==
+    assert convert_currency() ==
+    assert convert_currency() ==
+    assert convert_currency() ==
 
 def test_get_currency():
     assert get_currency() ==
