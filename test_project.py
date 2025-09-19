@@ -13,10 +13,10 @@ def test_convert_volume():
     assert convert_volume(1, "gal_us", "l") == 3.78541
 
 def test_convert_lenght():
-    assert convert_length() ==
-    assert convert_length() ==
-    assert convert_length() ==
-    assert convert_length() ==
+    assert convert_length(1, "km", "m") == 1000
+    assert convert_length(1, "m", "ym") == 1.0000000000000001e+24
+    assert convert_length(1, "ft", "m") == 0.3048
+    assert convert_length(1, "mi", "m") == 1609.344
 
 def test_convert_temperature():
     assert convert_temperature() ==
