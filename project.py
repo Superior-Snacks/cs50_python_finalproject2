@@ -77,11 +77,11 @@ def convert_temperature(amount, old, new):
     else:
         return "input error"
 
-def convert_currency(amount, old, new):
+def convert_currency(amount, old, new, rates):
     if old.lower() == new.lower():
         return amount
     if (old.upper() in currencies) and (new.upper() in currencies):
-        return amount * get_currency(old.upper())[new.upper()]
+        return amount * rates[new.upper()]
 
 def get_currency(base):
     url =f"https://api.frankfurter.app/latest?from={base}"
@@ -95,7 +95,7 @@ def decide(amount, old, new):
     new = new.strip()
 
     if old in temps and new in temps:
-        return convert_temperature(amount, old, new)
+        return convert_temperature(amount, get_currency(old), new)
 
     if old.upper() in currencies and new.upper() in currencies:
         return convert_currency(amount, old, new)
