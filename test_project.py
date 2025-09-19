@@ -24,20 +24,20 @@ def test_convert_temperature():
     assert convert_temperature(1, "k", "C") == -272.15
     assert convert_temperature(1, "f", "c") == -17.22222222222222
 
-def test_convert_currency():
-    assert convert_currency() ==
-    assert convert_currency() ==
-    assert convert_currency() ==
-    assert convert_currency() ==
+"""def test_convert_currency():
+    assert convert_currency(1) ==
+    assert convert_currency(1) ==
+    assert convert_currency(1) ==
+    assert convert_currency(1) ==
 
 def test_get_currency():
     assert get_currency() ==
     assert get_currency() ==
     assert get_currency() ==
-    assert get_currency() ==
+    assert get_currency() =="""
 
 def test_decide():
-    assert decide() ==
-    assert decide() ==
-    assert decide() ==
-    assert decide() ==
+    assert decide(1, "kg", "g") == 1000.0
+    assert decide(1, "l", "ml") == 1000.0
+    assert decide(1, "km", "m") == 1000.0
+    assert decide(1, "C", "F") == 33.8
