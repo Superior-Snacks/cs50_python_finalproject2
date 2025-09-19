@@ -25,10 +25,11 @@ def test_convert_temperature():
     assert convert_temperature(1, "f", "c") == -17.22222222222222
 
 def test_convert_currency():
-    assert convert_currency() ==
-    assert convert_currency() ==
-    assert convert_currency() ==
-    assert convert_currency() ==
+    rates = {"USD": 1.0, "EUR": 0.9, "ISK": 139.0, "DKK": 0.4, "JPY":265.0}
+    assert convert_currency(10, "USD", "ISK", rates) == 1390
+    assert convert_currency(1, "USD", "JPY", rates) == 265
+    assert convert_currency(20, "USD", "DKK", rates) == 8
+    assert convert_currency(9, "USD", "EUR", rates) == 8.1
 
 def test_get_currency():
     assert get_currency() ==
