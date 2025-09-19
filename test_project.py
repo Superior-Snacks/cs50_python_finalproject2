@@ -31,12 +31,6 @@ def test_convert_currency():
     assert convert_currency(20, "USD", "DKK", rates) == 8
     assert convert_currency(9, "USD", "EUR", rates) == 8.1
 
-def test_get_currency():
-    assert get_currency() ==
-    assert get_currency() ==
-    assert get_currency() ==
-    assert get_currency() ==
-
 def test_decide():
     assert decide(1, "kg", "g") == 1000.0
     assert decide(1, "l", "ml") == 1000.0
