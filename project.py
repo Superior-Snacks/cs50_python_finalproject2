@@ -84,10 +84,12 @@ def convert_currency(amount, old, new, rates):
         return amount * rates[new.upper()]
 
 def get_currency(base):
+    print("gotten", base)
     url =f"https://api.frankfurter.app/latest?from={base}"
     response = requests.get(url)
     response.raise_for_status()
     data = response.json()
+    print("data")
     return data["rates"]
 
 def decide(amount, old, new):
@@ -95,10 +97,11 @@ def decide(amount, old, new):
     new = new.strip()
 
     if old in temps and new in temps:
-        return convert_temperature(amount, get_currency(old), new)
+        return convert_temperature(amount, old, new)
 
     if old.upper() in currencies and new.upper() in currencies:
-        return convert_currency(amount, old, new)
+        print("herer")
+        return convert_currency(amount, old, new, get_currency(old))
 
     if old in length and new in length:
         return convert_length(amount, old, new)
